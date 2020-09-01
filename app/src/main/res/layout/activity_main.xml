@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <!--Header Nav -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <!--  Img Group  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="10dp">
+            <!--    Back Button     -->
+            <!--
+            <LinearLayout
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="3">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:scaleType="centerInside"
+                    android:background="#0000"
+                    android:src="@drawable/angle_left_solid"/>
+            </LinearLayout>
+            -->
+            <!--    Logo    -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="7">
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitCenter"
+                    android:background="#0000"
+                    android:src="@drawable/logo"/>
+            </LinearLayout>
+            <!--    Message Btn    -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                >
+                <ImageButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#0000"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/paper_plane_solid_svg"/>
+            </LinearLayout>
+        </LinearLayout>
+        <!--    Line    -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="0dp"
+            android:background="#000"/>
+    </LinearLayout>
+    <!--  ./Header-Nav  -->
+    <!--  Main Content  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <!--    Rati Img    -->
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="370dp"
+            android:src="@drawable/rati"/>
+        <!--    Introduce RadonDr    -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/RadonDrIntroText"
+            android:text="test"
+            ></TextView>
+        <!--    Btn Connect Bluetooth    -->
+        <Button
+            android:layout_width="250dp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Connect Device"
+            android:id="@+id/BtnConBle"
+            />
+        <!--    Btn Login    -->
+        <Button
+            android:id="@+id/BtnLogin"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Login"
+            />
+    </LinearLayout>
+
+</LinearLayout>

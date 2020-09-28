@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     /** Get Button Object */
@@ -41,6 +43,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             /** moving Login Page Intent */
             case R.id.BtnLogin:
                 Toast.makeText(this, "Login Click", Toast.LENGTH_SHORT).show();
+
+                //startActivity(LoginIntent);
                 break;
             /** Message Alert Wrong Click */
             default:

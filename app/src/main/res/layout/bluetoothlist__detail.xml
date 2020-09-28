@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".BluetoothListViewActivity"
+    tools:context=".BluetoothList_Detail"
     android:orientation="vertical">
     <!--Header Nav -->
     <LinearLayout
@@ -68,36 +69,84 @@
             android:background="#000"/>
     </LinearLayout>
     <!--  ./Header-Nav  -->
-    <!--  Main  -->
-
+    <!--  Device Information Device Serial And Device Image  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingLeft="10dp"
+        android:gravity="center_vertical">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/rati"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:id="@+id/DeviceDetailName"
+            android:text="Testing"/>
+    </LinearLayout>
+    <!--  setting   -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <!--    Main-Img    -->
+
+        <!--    Wifi Setting  SSID  -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-            <ImageView
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingTop="100dp"
+            android:paddingRight="20dp">
+            <!--      SSID Setitng      -->
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="280dp"
-                android:src="@drawable/rati"/>
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
                 <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="2"
+                    android:gravity="center"
+                    android:text="SSID"/>
+                <Spinner
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="Search Device ..."/>
+                    android:layout_weight="2"
+                    android:id="@+id/WifiSettingId"/>
+            </LinearLayout>
+            <!--     Password Setting       -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Password"/>
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:id="@+id/WifiSettingPw"/>
+            </LinearLayout>
+            <Button
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:id="@+id/WifiSettingBtn"
+                android:onClick="SettingBtnClick"
+                android:text="setting"/>
         </LinearLayout>
-        <!--   ./Img     -->
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scrollbars="vertical"
-            android:id="@+id/BluetoothList">
-
-        </ListView>
-        
     </LinearLayout>
-
 </LinearLayout>
